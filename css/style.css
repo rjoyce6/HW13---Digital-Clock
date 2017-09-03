@@ -1,0 +1,38 @@
+/*========================================================
+          Sitewide Styles
+==========================================================*/
+/*multiple selector*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Aldrich', sans-serif;
+  color: #b54938;
+  background-color: #f1614b;
+  text-align: center;
+  margin-top: 0;
+}
+
+.comment-app {
+  margin: 20px auto;
+  max-width: 640px;
+  width: 100%;
+}
+
+/*========================================================
+          Display area
+========================================================*/
+/*placing img to the right*/
+.display {
+  margin-top: 150px;
+
+}
+
+h1 {
+  font-size: 170px;
+
+}
