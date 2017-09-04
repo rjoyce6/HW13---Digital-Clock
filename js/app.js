@@ -1,6 +1,7 @@
 
 //call the function every second using and event listener
 document.getElementById('display').addEventListener('onload', getTimeAMPM(), false);
+document.getElementById('startTimer').addEventListener('click', setTimer())
 
 //-----------------------------------------------------------------
 // Create a function to create a clock using the Date Method
@@ -30,6 +31,19 @@ function getTimeAMPM() {
   // Display time every second
   setTimeout(getTimeAMPM, 1000)
 }
+
+
+//-----------------------------------------------------------------
+// Create a function to display a timer selected by the user
+
+function setTimer(){
+  var timer = document.getElementById('timerValue').value;
+
+  console.log('timer');
+
+
+}
+
 
 //-----------------------------------------------------------------
 //Add a zero to seconds
