@@ -1,33 +1,12 @@
-// Create a function to create a clock using the Date Method
-function newClock(){
-  document.getElementById('display').innerHTML = "";
 
-  var h1 = document.createElement('h1');
-  h1.id = 'date';
-  var addHere = document.getElementById('display');
+//call the function every second using and event listener
+document.getElementById('display').addEventListener('onload', getTimeAMPM(), false);
+
+//-----------------------------------------------------------------
+// Create a function to create a clock using the Date Method
+function getTimeAMPM() {
 
   var newDate = new Date();
-  var text = document.createTextNode(getTimeAMPM(newDate));
-  h1.appendChild(text);
-  addHere.appendChild(h1);
-}
-
-//call the function every second
-setInterval(newClock, 1000);
-
-//-----------------------------------------------------------------
-//Add a zero to seconds
-function addZero(number){
-  if (number< 10 ){
-    number = "0" + number;
-  }
-  return number;
-}
-
-//-----------------------------------------------------------------
-// Inside the function, create a variable using concatination
-// to produce the current time ex. 12:30:45 am.
-function getTimeAMPM(newDate) {
 
   // get hours, minutes, and seconds
   var h = addZero(newDate.getHours());
@@ -44,6 +23,19 @@ function getTimeAMPM(newDate) {
   } else {
     ampm = 'PM';
   }
-  var strTime = h + ":" + m + ":" + s + " " + ampm;
-  return strTime;
+
+  // Select the element with id="display" to change the displayed time
+  document.getElementById('display').textContent = h + ":" + m + ":" + s + " " +ampm;
+
+  // Display time every second
+  setTimeout(getTimeAMPM, 1000)
+}
+
+//-----------------------------------------------------------------
+//Add a zero to seconds
+function addZero(number){
+  if (number< 10 ){
+    number = "0" + number;
+  }
+  return number;
 }
