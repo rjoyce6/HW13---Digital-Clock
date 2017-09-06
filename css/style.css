@@ -36,3 +36,32 @@ body {
 .timer button {
 
 }
+
+/*========================================================
+          Digital Clock
+========================================================*/
+.inner-clock {
+  width: 200px;
+  height: 200px;
+}
+
+#hr-hand, #min-hand, #sec-hand, #sec-tail {
+  stroke: black;
+  stroke-linecap: round;
+}
+
+#hr-hand {
+  stroke-width: 3px;
+}
+
+#min-hand {
+  stroke-width: 2px;
+}
+
+#sec-hand {
+  stroke-width: 1px;
+}
+
+.inner-clock .text {
+  color: #b54938;
+}
