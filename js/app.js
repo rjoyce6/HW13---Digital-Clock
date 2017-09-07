@@ -26,9 +26,9 @@ function getTimeAMPM() {
   }
 
   // move hands of the clock
-  setAttr('hr-hand', 30*h);
-  setAttr('min-hand', 6*m);
-  setAttr('sec-hand', 6*s);
+  setAttr('hr-hand', 30*h); // each hour is 30 degrees apart
+  setAttr('min-hand', 6*m); // each minute is 6 degrees apart
+  setAttr('sec-hand', 6*s); // each second is 6 degrees apart
 
   // Select the element with id="display" to change the displayed time
   document.getElementById('display').textContent = h + ":" + m + ":" + s + " " +ampm;

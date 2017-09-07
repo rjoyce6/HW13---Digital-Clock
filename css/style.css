@@ -40,12 +40,16 @@ body {
 /*========================================================
           Digital Clock
 ========================================================*/
-.inner-clock {
-  width: 200px;
-  height: 200px;
+.analog-clock {
+  margin-top: 30px;
 }
 
-#hr-hand, #min-hand, #sec-hand, #sec-tail {
+svg{
+  width: 140px;
+  height: 140px;
+}
+
+#hr-hand, #min-hand, #sec-hand {
   stroke: black;
   stroke-linecap: round;
 }
@@ -62,6 +66,7 @@ body {
   stroke-width: 1px;
 }
 
-.inner-clock .text {
-  color: #b54938;
+svg text {
+  fill: #b54938;
+  font-size: 25px;
 }
