@@ -48,7 +48,7 @@ function addZero(number){
 
 //-----------------------------------------------------------------
 //move the hands of the clock
-function movehands(id, val){
+function moveHands(id, val){
   var value = 'rotate(' + val + ', 100, 100)';
   document.getElementById(id).setAttribute('transform', value);
 }
