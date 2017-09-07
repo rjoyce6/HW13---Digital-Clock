@@ -26,9 +26,9 @@ function getTimeAMPM() {
   }
 
   // move hands of the clock
-  setAttr('hr-hand', 30*h); // each hour is 30 degrees apart
-  setAttr('min-hand', 6*m); // each minute is 6 degrees apart
-  setAttr('sec-hand', 6*s); // each second is 6 degrees apart
+  moveHands('hr-hand', 30*h); // each hour is 30 degrees apart
+  moveHands('min-hand', 6*m); // each minute is 6 degrees apart
+  moveHands('sec-hand', 6*s); // each second is 6 degrees apart
 
   // Select the element with id="display" to change the displayed time
   document.getElementById('display').textContent = h + ":" + m + ":" + s + " " +ampm;
@@ -48,18 +48,7 @@ function addZero(number){
 
 //-----------------------------------------------------------------
 //move the hands of the clock
-function setAttr(id, val){
-  var value = 'rotate(' + val + ', 70, 70)';
+function movehands(id, val){
+  var value = 'rotate(' + val + ', 100, 100)';
   document.getElementById(id).setAttribute('transform', value);
 }
-
-//-----------------------------------------------------------------
-// Create a function to display a timer selected by the user
-
-// function setTimer(){
-//   var timer = document.getElementById('timerValue').value;
-//
-//   console.log('timer');
-//
-//
-// }
